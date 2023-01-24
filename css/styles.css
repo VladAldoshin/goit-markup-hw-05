@@ -121,7 +121,6 @@ body {
 }
 
 .link {
-  position: relative;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -144,9 +143,12 @@ body {
 .contact:focus {
   color: #4d5ae5;
 }
+.header-menu-item{position: relative;}
+
 
 .menu-link-studio::after{
 content: '';
+display: block;
 position: absolute;
 width: 48px;
 height: 4px;
