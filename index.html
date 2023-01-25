@@ -31,12 +31,12 @@
           >
           <ul class="menu-list link-header">
             <li class="header-menu-item header-item">
-              <a class="link menu-link-studio" href="./index.html">Studio</a>
+              <a class="link menu-link-studio studio-active" href="./index.html">Studio</a>
             </li>
             <li class="header-menu-item header-item">
-              <a class="link menu-link-portfolio" href="./portfolio.html">Portfolio</a>
+              <a class="link" href="./portfolio.html">Portfolio</a>
             </li>
-            <li class="header-menu-item header-item"><a class="link menu-link-contacts" href="">Contacts</a></li>
+            <li class="header-menu-item header-item"><a class="link" href="">Contacts</a></li>
           </ul>
         </nav>
         <address class="adress-list header-adr">
@@ -57,7 +57,7 @@
       <section class="hero-section">
         <div class="container">
           <h1 class="hero-section-title">Effective Solutions for Your Business</h1>
-          <button class="hero-section-button" type="button">Order Service</button>
+          <button class="hero-section-button" type="button" data-modal-open>Order Service</button>
         </div>
       </section>
       <!-- ==================== Second section ========================== -->
@@ -421,5 +421,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close-button" data-modal-close>
+        <svg class="modal-close-button-icon" width="8" height="8">
+          <use href="./images/sprite.svg#icon-close_modal"></use>
+        </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
