@@ -154,24 +154,13 @@ position: absolute;
 width: 48px;
 height: 4px;
 left: 0px;
-top: 45px;
+top: 48px;
 background: #404BBF;
 border-radius: 2px;
 }
 .studio-active{color: #404BBF;}
 
-.menu-link-portfolio::after{
-content: '';
-position: absolute;
-width: 66px;
-height: 4px;
-left: 0px;
-top: 45px;
-background: #404BBF;
-border-radius: 2px;
-}
 
-.portfolio-active{color: #404BBF;}
 
 
 
@@ -480,7 +469,7 @@ width: 100%;
 height: 100%;
 background: rgba(46, 47, 66, 0.4);
 z-index: 999;
-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);}
+transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 
 .modal{
 position: absolute;
@@ -507,7 +496,15 @@ padding:0;
 background: #E7E9FC;
 border: 1px solid rgba(0, 0, 0, 0.1);
 cursor: pointer;
+transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.modal-close-button:hover,
+.modal-close-button:focus {
+background: #404BBF;
+}
+.modal-close-button:hover .modal-close-button-icon,
+.modal-close-button:focus .modal-close-button-icon {fill: #FFFFFF;}
 
 .backdrop.is-hidden{
 opacity: 0;
@@ -520,6 +517,18 @@ pointer-events: none;
 padding-top: 96px;
 padding-bottom: 120px;
 }
+.menu-link-portfolio::after{
+content: '';
+position: absolute;
+width: 66px;
+height: 4px;
+left: 0px;
+top: 48px;
+background: #404BBF;
+border-radius: 2px;
+}
+  
+.portfolio-active{color: #404BBF;}
 
 .portfolio-list-button {
 display: flex;
@@ -549,7 +558,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bez
 color: #ffffff;
 background: #404bbf;
 box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-border: 1px transparent;
+border: 1px solid transparent;
 }
 
 .portfolio-button:active {
@@ -580,7 +589,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bez
 color: #ffffff;
 background: #404bbf;
 box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-border: 1px transparent;
+border: 1px solid transparent;
 }
 
 .portfolio-second-button:active {
